@@ -1,5 +1,14 @@
-name: 4.Push Multi Job seq
-on: push
+name: 4.Pull Multi Job seq
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - 'release/**'
+  pull_request:
+    branches:
+        - main
+ 
 jobs:
     build:
         runs-on: ubuntu-latest
