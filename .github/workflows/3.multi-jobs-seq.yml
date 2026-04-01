@@ -1,4 +1,4 @@
-name: Multi Job seq
+name: 3.Multi Job seq
 on: workflow_dispatch
 jobs:
     build:
