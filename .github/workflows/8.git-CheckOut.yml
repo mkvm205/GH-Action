@@ -1,13 +1,13 @@
-name: GitHub Action Code Checkout
+# name: GitHub Action Code Checkout
 
-on: push
+# on: push
 
-jobs:
-  action-demo:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the code
-        uses: actions/checkout@v4
+# jobs:
+#   action-demo:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout the code
+#         uses: actions/checkout@v4
 
-      - name: Print index.html file
-        run: cat index.html
+#       - name: Print index.html file
+#         run: cat index.html
