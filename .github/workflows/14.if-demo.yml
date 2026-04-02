@@ -1,0 +1,15 @@
+name: 14.if-Demo
+on:
+    push:
+        branches:
+            - main
+            - develop
+jobs:
+    demo:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Run if Branch is Main 
+            if: github.ref == 'refs/heads/main'
+            run: echo "Running this Step"
+          - name: Run this Step
+            run: echo "Running this Step"
