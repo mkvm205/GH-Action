@@ -9,7 +9,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: Run if Branch is Main 
-            if: github.ref == 'refs/heads/main'
+            #if: github.ref == 'refs/heads/main'
+            if: github.ref_name == 'main'
             run: echo "Running this Step"
           - name: Run this Step
             run: echo "Running this Step"
