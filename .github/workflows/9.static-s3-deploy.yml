@@ -14,9 +14,10 @@ jobs:
             aws-region: us-east-1
       - name: Upload Static code to S3
         run: |
-          aws s3 sync ./s3://ghaction-s3-042026/ \
-          --exclude "*" \
-          --include "index.html"
+          aws s3 sync . s3://ghaction-s3-042026/ --exclude "*" --include "index.html"
+          # aws s3 sync ./s3://ghaction-s3-042026/ \
+          # --exclude "*" \
+          # --include "index.html"
         
         
       
