@@ -1,0 +1,20 @@
+name: Outputs Demo
+on: push
+jobs:
+    build:
+        outputs:
+            version: ${{steps.step1.outputs.version}}
+        runs-on: ubuntu-latest
+        steps:
+            - name: Build Step
+              id: step1
+              run: echo "version=0.0.1" >> $GITHUB_OUTPUT
+            - name: build Step 2
+              run: echo "This Version is ${{steps.step1.outputs.version}}"
+    
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy the APp 
+              run: echo "We are deploying the version ${{needs.build.outputs.version}}"
