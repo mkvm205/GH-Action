@@ -1,6 +1,9 @@
 name: 16.Build & Deploy on ConditioN
 
 on:
+  push:
+    branches:
+        - main
   pull_request:
     types:
       - opened
@@ -9,7 +12,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
     steps:
       - name: Build Step
         run: echo "Building the Application"
+    
+  deploy: 
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref_name == 'main'
+    steps:
+        - name: Deploy Step
+          run: echo "Deploying the app" 
 
