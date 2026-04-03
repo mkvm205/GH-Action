@@ -1,0 +1,13 @@
+name: 15. OR-Condtion-Demo
+on:
+    push:
+        branches:
+            - main
+            - develop
+jobs:
+    demo:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Run if Branch is Main 
+            if: github.actor == 'krish' || github.actor == 'mkvm205'
+            run: echo "it is triggered by Krish or or mkvm205"
