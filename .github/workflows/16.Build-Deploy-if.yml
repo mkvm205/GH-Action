@@ -1,4 +1,4 @@
-name: Build & Deploy on Condition
+name: 16.Build & Deploy on ConditioN
 
 on:
   pull_request:
