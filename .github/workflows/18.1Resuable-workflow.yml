@@ -1,15 +1,15 @@
-name: 18.1 Reusable workflow
-on: 
-    workflow_call:
-        inputs:
-            name:
-                description: Enter the name
-                required: true
-                type: string
+# name: 18.1 Reusable workflow
+# on: 
+#     workflow_call:
+#         inputs:
+#             name:
+#                 description: Enter the name
+#                 required: true
+#                 type: string
 
-jobs:
-    greetings:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Greeting Steps
-              run: echo "HI ${{inputs.name}} Resuable workflow"
+# jobs:
+#     greetings:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: Greeting Steps
+#               run: echo "HI ${{inputs.name}} Resuable workflow"

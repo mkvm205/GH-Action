@@ -1,9 +1,9 @@
-name: 18.2-Call Reusable workflow
-on: 
-    push
+# name: 18.2-Call Reusable workflow
+# on: 
+#     push
 
-jobs:
-    call-greeting:
-        uses: ./.github/workflows/18.1Resuable-workflow.yml
-        with: 
-            name: "Murali Krishnan"
+# jobs:
+#     call-greeting:
+#         uses: ./.github/workflows/18.1Resuable-workflow.yml
+#         with: 
+#             name: "Murali Krishnan"
