@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: pyapp
-          image: mkvm2050/gha-pyap:cd46d92
+          image: mkvm2050/gha-pyap:17a86d0
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
