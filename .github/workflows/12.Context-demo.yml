@@ -1,19 +1,19 @@
-name: 12.Context-Demo
-on: push 
-jobs: 
-    context-demo:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Use Context Variables
-              run: |
-               echo "The Workflow is triggered by ${{github.actor}} "
-               echo "The Repository Name is ${{github.repository}}"
+# name: 12.Context-Demo
+# on: push 
+# jobs: 
+#     context-demo:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: Use Context Variables
+#               run: |
+#                echo "The Workflow is triggered by ${{github.actor}} "
+#                echo "The Repository Name is ${{github.repository}}"
 
-            - name: Print all Variables under Github
-              run: echo '${{ toJson(github) }}'
+#             - name: Print all Variables under Github
+#               run: echo '${{ toJson(github) }}'
 
-            - name: Print Envrionement Variables1
-              run:  printenv
+#             - name: Print Envrionement Variables1
+#               run:  printenv
 
-            - name: Print Envrionement Variables2
-              run: echo "$GITHUB_SHA"
+#             - name: Print Envrionement Variables2
+#               run: echo "$GITHUB_SHA"
